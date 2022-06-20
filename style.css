@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;}
+  
+body{
+  background: linear-gradient(#327355, #2A5159);
+  background-repeat: no-repeat;
+  height: 459px;
+}
+.container{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: auto;
+ margin-top: 200px;
+ height: 310px;
+ width: 210px;
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.589);
+
+}
+.operacoes {
+ margin-top: 30px;
+
+}
+.display input{
+  position: relative;
+  margin-top: 20px;
+  height: 40px;
+  width: 200px;
+  font-weight: 600;
+  font-size: 1.3rem;
+ text-align-last: right;
+}
+
+.operador{
+  position: relative;
+  left: 80px;
+  
+  top: 10px;
+  
+ 
+ 
+}
+.operador button{
+   cursor: pointer;
+  height: 25px;
+  width: 40px;
+  border: none;
+ background-color: #1A2426;
+ color: white;
+ 
+}
+.operador button:hover{
+  background-color: #1a2426c2;
+}
+.operacoes {
+  position: relative;
+  bottom: 20px;
+  
+ 
+}
+
+ .operacoes .operador1 button{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: darkgray;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.operacoes .operador1 button:hover{
+  background-color: rgba(169, 169, 169, 0.767);
+}
+.number{
+ padding: 10px 5px;
+ 
+}
+
+.number button{
+  background:white;
+  border: none;
+  height: 30px;
+  width: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
+}
+.number button:hover{
+  background-color:  azure; 
+}
+.operador-igual{
+  position: relative;
+  left: 10px;
+  
+}
+.operador-igual button{
+  height: 30px;
+  width: 60px;  
+  border-radius: 3px;
+  border: none;
+  background-color: darkgray;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.operador-igual button:hover{
+  background-color: rgba(169, 169, 169, 0.767);
+}
+ 
+
+ 
