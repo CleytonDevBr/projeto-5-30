@@ -6,37 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="icons/css/all.css">
 </head>
 <body>
+  <p class="amor">hellen eu te amo<i class="fa fa-heart" aria-hidden="true"></i></p>
   <div class="container">
-   <div class="display"><input type="text" name="calculo" id="display"></div>
-   <div class="operador"><button>C</button></div>
+    
+   <div class="display"><p id="resultado"></p></div>
+   <div class="operador"><button onclick="clean()">C</button></div>
    <div class="operacoes">
    <table>
      <tr>
-     <th class="number"><button>7</button></th>
-     <th class="number"><button>8</button></th>
-     <th class="number"><button>9</button></th>
-     <th class="operador1"><button>*</button></th>
+     <th class="number"><button onclick="insert(7)">7</button></th>
+     <th class="number"><button onclick="insert(8)">8</button></th>
+     <th class="number"><button onclick="insert(9)">9</button></th>
+     <th class="operador1"><button onclick="insert('*')">*</button></th>
      </tr>
      <tr>
-     <th class="number"><button>4</button></th>
-     <th class="number"><button>5</button></th>
-     <th class="number"><button>6</button></th>
-     <th class="operador1"><button>-</button></th>
+     <th class="number"><button onclick="insert(4)">4</button></th>
+     <th class="number"><button onclick="insert(5)">5</button></th>
+     <th class="number"><button onclick="insert(6)">6</button></th>
+     <th class="operador1"><button onclick="insert('-')" >-</button ></th>
      </tr>
      <tr>
-      <th class="number"><button>1</button></th>
-      <th class="number"><button>2</button></th>
-      <th class="number"><button>3</button></th>
-      <th class="operador1"><button>+</button></th>
+      <th class="number"><button onclick="insert(1)">1</button></th>
+      <th class="number"><button onclick="insert(2)">2</button></th>
+      <th class="number"><button onclick="insert(3)">3</button></th>
+      <th class="operador1"><button onclick="insert('+')" >+</button></th>
       </tr>
       <tr>
-        <th class="number"><button>0</button></th>
-        <th class="operador-igual"><button>=</button></th>
+        <th class="number" onclick="insert(0)"><button>0</button></th>
+        <th class="operador-igual"><button onclick="calcular()">=</button></th>
       </tr>
    </table>
   </div>
   </div>
+  <script>
+    function insert(num){
+      var numero = document.getElementById('resultado').innerHTML;
+      document.getElementById('resultado').innerHTML = numero + num;
+    }
+    function clean(){
+      document.getElementById('resultado').innerHTML = '';
+    }
+    function calcular(){
+      var resultado = document.getElementById('resultado').innerHTML;
+      if (resultado){
+        document.getElementById('resultado').innerHTML = eval(resultado)
+      }
+      
+    }
+  </script>
 </body>
+
 </html>
